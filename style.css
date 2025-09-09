@@ -1,0 +1,96 @@
+/* --- Fuentes y Reset --- */
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Roboto:wght@300;400&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* --- Fondo general --- */
+body {
+    background-color: #fdfcf8;
+    color: #3e3e3e;
+    font-family: 'Roboto', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+/* --- Contenedor central --- */
+.container {
+    text-align: center;
+    max-width: 600px;
+    padding: 20px;
+}
+
+/* --- Título principal --- */
+h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.5rem;
+    color: #556b2f; /* Verde oliva elegante */
+    margin-bottom: 8px;
+}
+
+/* --- Subtítulo --- */
+.subtitle {
+    font-size: 1.1rem;
+    color: #7a5c42; /* Marrón claro */
+    margin-bottom: 25px;
+}
+
+/* --- Contador --- */
+#countdown {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+/* --- Caja de tiempo --- */
+.time-box {
+    background-color: #f8f5f0;
+    border: 1px solid #e0d5c3;
+    padding: 18px 22px;
+    border-radius: 12px;
+    box-shadow: 0 2px 10px rgba(85, 107, 47, 0.1);
+    min-width: 90px;
+    transition: transform 0.2s ease-in-out;
+}
+
+/* Animación al pasar el mouse */
+.time-box:hover {
+    transform: scale(1.05);
+}
+
+/* --- Números grandes --- */
+.time-box span:first-child {
+    display: block;
+    font-size: 2rem;
+    font-weight: bold;
+    color: #556b2f; /* Verde oliva */
+}
+
+/* --- Etiquetas debajo --- */
+.label {
+    display: block;
+    font-size: 0.9rem;
+    color: #7a5c42; /* Marrón claro */
+    margin-top: 5px;
+}
+
+/* --- Mensaje final --- */
+#finished {
+    display: none;
+    margin-top: 25px;
+    font-size: 1.5rem;
+    color: #556b2f;
+    animation: fadeIn 1.5s ease-in-out forwards;
+}
+
+/* Animación de aparición */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
