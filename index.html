@@ -7,12 +7,27 @@
     <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-    <div class="container">
-        <h1>¡Nos casamos! 💍</h1>
-        <p class="subtitle">Falta muy poco para el gran día</p>
+    <header>
+         <div class="music-control">
+    <button id="musicBtn">🎵 </button>
+  </div>
+   <!-- tu contenido de secciones acá -->
+  
+  <audio id="bgMusic" loop>
+    <source src="./Golden.mp3" type="audio/mpeg">
+    Tu navegador no soporta audio en HTML5.
+  </audio>
+    </header>
+<main>
+    <section class="panel" id="section1">
+    <img src="./invitacion.png" alt="Portada" class="hero-img">
+  </section>
 
-        <div id="countdown">
-            <div class="time-box">
+  <section class="panel" id="section2">
+    <div class="container">
+      <h1>¡Cuenta Regresiva! 💍</h1>
+      <div id="countdown">
+        <div class="time-box">
                 <span id="days">00</span>
                 <span class="label">Días</span>
             </div>
@@ -28,10 +43,21 @@
                 <span id="seconds">00</span>
                 <span class="label">Segundos</span>
             </div>
-        </div>
-
-        <div id="finished">¡El gran día llegó! 🎉</div>
+      </div>
     </div>
+  </section>
+
+  <section class="panel" id="section3">
+    <h2>Te esperamos ✨</h2>
+
+    <section class="panel" id="section3">
+  <h2>¡Confirmá tu asistencia! ✨</h2>
+  <a href="https://forms.gle/LxhgAvUfiEwSK3mT7" target="_blank" class="btn-link">
+    Completar formulario
+  </a>
+</section>
+  </section>
+</main>
     <script src="script.js"></script>
 </body>
 </html>

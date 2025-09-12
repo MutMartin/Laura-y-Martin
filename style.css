@@ -1,35 +1,11 @@
 /* --- Fuentes y Reset --- */
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Roboto:wght@300;400&display=swap');
 
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-/* --- Fondo y base --- */
-body {
-    background-color: #fdfcf8;
-    color: #3e3e3e;
-    font-family: 'Roboto', sans-serif;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 20px;
-    min-height: 100vh;
-}
-
-/* --- Contenedor central --- */
-.container {
-    text-align: center;
-    max-width: 90%;
-}
-
 /* --- Título principal --- */
-h1 {
+ h1 {
     font-family: 'Playfair Display', serif;
     font-size: 1.8rem;
-    color: #556b2f; /* Verde oliva elegante */
+    color: #556b2f; /*Verde oliva elegante*/
     margin-bottom: 8px;
 }
 
@@ -43,8 +19,9 @@ h1 {
 /* --- Contenedor de cuenta regresiva --- */
 #countdown {
     display: flex;
-    flex-direction: column;
+    flex-wrap: wrap;
     align-items: center;
+    justify-content: center;
     gap: 12px;
 }
 
@@ -71,28 +48,96 @@ h1 {
     color: #556b2f;
 }
 
-/* --- Etiquetas debajo --- */
-.label {
-    display: block;
-    font-size: 0.9rem;
-    color: #7a5c42;
-    margin-top: 5px;
+.music-control {
+  position: fixed;
+  top: 15px;
+  right: 15px;
+  z-index: 1000;
 }
 
-/* --- Mensaje final --- */
-#finished {
-    display: none;
-    margin-top: 20px;
-    font-size: 1.3rem;
-    color: #556b2f;
-    animation: fadeIn 1.5s ease-in-out forwards;
+#musicBtn {
+  background: #556b2f;
+  color: #fff;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 50px;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: background 0.3s;
+  opacity: 0.5;
 }
 
-/* Animación de aparición */
-@keyframes fadeIn {
-    from { opacity: 0; transform: translateY(10px); }
-    to { opacity: 1; transform: translateY(0); }
+#musicBtn:hover {
+  background: #7a5c42;
+  opacity: 0.5;
 }
+.btn-link {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 12px 25px;
+  font-size: 1rem;
+  font-weight: bold;
+  color: #fff;
+  background: #7a5c42; /* marrón claro */
+  border: none;
+  border-radius: 30px;
+  text-decoration: none;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.btn-link:hover {
+  background: #556b2f; /* verde oliva */
+  transform: scale(1.05);
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  overflow-x: hidden;
+}
+
+.panel {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+}
+
+.panel.visible {
+  opacity: 1;
+}
+
+/* Portada */
+#section1 {
+  background: #000;
+}
+.hero-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Cuenta regresiva */
+#section2 {
+  background: #fdfcf8;
+  color: #3e3e3e;
+  text-align: center;
+}
+
+/* Tercera sección */
+#section3 {
+  background: #556b2f;
+  flex-direction: column;
+  color: white;
+  text-align: center;
+}
+
 
 /* --- ESTILOS RESPONSIVE --- */
 

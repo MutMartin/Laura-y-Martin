@@ -1,3 +1,35 @@
+
+// Intersection Observer para hacer aparecer las secciones
+const panels = document.querySelectorAll(".panel");
+
+const observer = new IntersectionObserver(entries => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add("visible");
+    } else {
+      entry.target.classList.remove("visible");
+    }
+  });
+}, { threshold: 0.5 }); // activa cuando el 50% de la sección está visible
+
+panels.forEach(panel => {
+  observer.observe(panel);
+});
+
+const music = document.getElementById("bgMusic");
+const btn = document.getElementById("musicBtn");
+let isPlaying = false;
+
+btn.addEventListener("click", () => {
+  if (isPlaying) {
+    music.pause();
+    btn.textContent = "🎵";
+  } else {
+    music.play();
+    btn.textContent = "⏸️";
+  }
+  isPlaying = !isPlaying;
+});
 // === CONFIGURACIÓN DE LA FECHA Y HORA ===
 // Formato: Año, Mes-1, Día, Hora, Minuto, Segundo
 const eventDate = new Date(2025, 11, 7, 11, 0, 0).getTime(); // 25 Dic 2025 - 18:00:00
