@@ -65,3 +65,38 @@ function updateCountdown() {
 // Actualiza cada segundo
 const interval = setInterval(updateCountdown, 1000);
 updateCountdown();
+
+// Modal
+const openBtn = document.getElementById("openCard");
+const closeBtn = document.getElementById("closeCard");
+const overlay = document.getElementById("overlay");
+
+openBtn.addEventListener("click", () => {
+  overlay.style.display = "flex";
+});
+
+closeBtn.addEventListener("click", () => {
+  overlay.style.display = "none";
+});
+
+// Cerrar si clickea fuera de la tarjeta
+overlay.addEventListener("click", (e) => {
+  if (e.target === overlay) {
+    overlay.style.display = "none";
+  }
+});
+
+// Copiar texto
+const copyBtn = document.getElementById("copyBtn");
+const copyText = document.getElementById("copyText");
+
+copyBtn.addEventListener("click", () => {
+  navigator.clipboard.writeText(copyText.textContent)
+    .then(() => {
+      copyBtn.textContent = "✅ Copiado";
+      setTimeout(() => {
+        copyBtn.textContent = "📋 Copiar";
+      }, 2000);
+    })
+    .catch(err => console.log("Error al copiar:", err));
+});
