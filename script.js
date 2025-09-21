@@ -15,7 +15,7 @@ const observer = new IntersectionObserver(entries => {
 panels.forEach(panel => {
   observer.observe(panel);
 });
-
+// Musica de fondo
 const music = document.getElementById("bgMusic");
 const btn = document.getElementById("musicBtn");
 let isPlaying = false;
@@ -23,7 +23,7 @@ let isPlaying = false;
 btn.addEventListener("click", () => {
   if (isPlaying) {
     music.pause();
-    btn.textContent = "🎵";
+    btn.textContent = "▶️";
   } else {
     music.play();
     btn.textContent = "⏸️";

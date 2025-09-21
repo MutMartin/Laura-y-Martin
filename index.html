@@ -1,97 +1,113 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Cuenta Regresiva</title>
-    <link rel="stylesheet" href="style.css" />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Laura y Martin</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
+
 <body>
-    <header>
-         <div class="music-control">
-    <button id="musicBtn">🎵 </button>
-  </div>
-   <!-- tu contenido de secciones acá -->
-  
-  <audio id="bgMusic" loop>
-    <source src="./Perfect.mp3" type="audio/mpeg">
-    Tu navegador no soporta audio en HTML5.
-  </audio>
-    </header>
-<main>
-    <section class="panel" id="section1">
-    <img src="./invitacion2.png" alt="Portada" class="hero-img">
-  </section>
-
-  <section class="panel" id="section2">
-    <div class="container">
-      <h1>¡Cuenta Regresiva! 💍</h1>
-      <div id="countdown">
-        <div class="time-box">
-                <span id="days">00</span>
-                <span class="label">Días</span>
-            </div>
-            <div class="time-box">
-                <span id="hours">00</span>
-                <span class="label">Horas</span>
-            </div>
-            <div class="time-box">
-                <span id="minutes">00</span>
-                <span class="label">Minutos</span>
-            </div>
-            <div class="time-box">
-                <span id="seconds">00</span>
-                <span class="label">Segundos</span>
-            </div>
-      </div>
+  <header>
+    <!-- Botón flotante de música -->
+    <div class="music-control">
+      <button id="musicBtn" class="music-btn">▶️</button>
     </div>
-  </section>
+    <!-- tu contenido de secciones acá -->
 
-  <section class="panel" id="section3">
-    <h2>Te esperamos ✨</h2>
-
-  <h2>¡Confirmá tu asistencia! ✨</h2>
-  <a href="https://forms.gle/LxhgAvUfiEwSK3mT7" target="_blank" class="btn-link">
-    Completar formulario
-  </a>
+    <audio id="bgMusic" loop preload="none">
+      <source src="./Perfect.mp3" type="audio/mpeg">
+      Tu navegador no soporta audio en HTML5.
+    </audio>
+  </header>
+  <main>
+    <section class="panel" id="section1">
+      <img src="./invitacion2.png" alt="Portada" class="hero-img">
     </section>
-<section class="panel" id="section2">
-    <h2>Almuerzo y Civil</h2>
-    <p>El 7 de diciembre a las 12:00 hs es el civil y despues nos quedamos a almorzar y disfrutar.</p>
-    <p>Sabemos que la mayoria no vive cerca por lo que por suerte hay varias cabañas cerca</p>
-<a href="https://maps.app.goo.gl/ZnMABjQCLMmtVhH36?g_st=aw" target="_blank" class="btn-link">
-    La ubicación
-  </a>
-  </section>
+
+    <section class="panel" id="section2">
+      <div class="container">
+        <h1>¡Cuenta Regresiva! 💍</h1>
+        <div id="countdown">
+          <div class="time-box">
+            <span id="days">00</span>
+            <span class="label">Días</span>
+          </div>
+          <div class="time-box">
+            <span id="hours">00</span>
+            <span class="label">Horas</span>
+          </div>
+          <div class="time-box">
+            <span id="minutes">00</span>
+            <span class="label">Minutos</span>
+          </div>
+          <div class="time-box">
+            <span id="seconds">00</span>
+            <span class="label">Segundos</span>
+          </div>
+        </div>
+      </div>
+      <div>
+        <h3 class="label">Estamos emocionandos de celebrar junto a vos este momento inolvidable</h3>
+      </div>
+    </section>
+
+    <section class="panel" id="section3">
+      <h2>Te esperamos ✨</h2>
+
+      <h2>¡Confirmá tu asistencia! ✨</h2>
+      <a href="https://forms.gle/LxhgAvUfiEwSK3mT7" target="_blank" class="btn-link">
+        Completar formulario
+      </a>
+
+    </section>
+
+
+    <section class="panel" id="section2">
+      <h2>Almuerzo y Civil</h2>
+      <p>La Ceremonia Civil sera a las 12hs en el salón, seguido de un almuerzo y un momento de disfrute juntos 🥂</p>
+      <a href="https://maps.app.goo.gl/ZnMABjQCLMmtVhH36?g_st=aw" target="_blank" class="btn-link">
+        La ubicación
+      </a>
+      <p>Para quienes vienen de fuera, la zona cuenta con varias opciones de cabañas🏡</p>
+
+    </section>
+
+
     <section class="panel" id="section3">
       <img src="./icono-dresscode.svg" alt="drescode" class="ico-img">
-    <h2>DRESS CODE</h2>
+      <h2>DRESS CODE</h2>
 
-  <h3>Elegante Sport</h3>
+      <h3>Elegante Sport</h3>
     </section>
-    
-  <section class="panel" id="section2">
+
+    <section class="panel" id="section2">
       <img src="./icono-regalo.svg" alt="regalo" class="ico-img">
-      <h2>Información especial 💌</h2>
-    <h3>Su presencia es lo mas importante para nosotros. Si deseas realizarnos un regalo aceptamos MP</h3>
-  <button class="btn-link" id="openCard">Ver tarjeta</button>
-   </section>   
-  <div id="overlay" class="overlay">
-    <div class="card">
-      <button class="close-btn" id="closeCard">✖</button>
-      <h3>Cuenta bancaria para regalos 🎁</h3>
-      <p>Banco Galicia</p>
-      <p>Titular: Martin Alejandro Gomez</p>
-      <p>CBU: </p><p id="copyText">0070030510000001379911</p>
-      <p>Alias: MARTIN.GOMEZ.TITI</p>
-    <button class="copy-btn" id="copyBtn">📋 Copiar</button>
-    
+      <!-- <h2>Información especial 💌</h2> -->
+      <h5>Tu presencia es lo mas importante para nosotros, pero si deseas hacernos un regalo, te brindamos nuestro alias
+        para que puedas enviarnos tu regalo.</h5>
+      <button class="btn-link" id="openCard">Ver Alias</button>
+    </section>
+
+
+    <div id="overlay" class="overlay">
+      <div class="card">
+        <button class="close-btn" id="closeCard">✖</button>
+        <h3>Cuenta bancaria para regalos 🎁</h3>
+        <p>Mercado Pago</p>
+        <p>Titular: Martin Francisco Mut</p>
+        <p>CVU: <span id="copyText">0000003100013239349677</span> </p>
+        <p>Alias: martinmut.mp</p>
+        <button class="copy-btn" id="copyBtn">📋 Copiar</button>
+
+      </div>
     </div>
-  </div>
 
 
 
-</main>
-    <script src="script.js"></script>
+  </main>
+  <script src="script.js"></script>
 </body>
+
 </html>
